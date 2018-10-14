@@ -14,11 +14,12 @@
   export default {
     computed: {
       products() {
-        return store.state.products;
+        return store.getters.availableProducts;
       },
     },
     created() {
       shop.getProducts((products) => {
+        // Don't update the store directly, use commit
         store.commit('setProducts', products);
       });
     },

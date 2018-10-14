@@ -8,7 +8,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {  // Data
     products: [],
-    cart: [],
+    cart: [], // {id, quantity}
   },
 
   getters: {  // Computer Properties

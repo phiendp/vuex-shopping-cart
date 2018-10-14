@@ -4,7 +4,7 @@ import Vue from 'vue';
 Vue.use(Vuex);
 
 
-new Vuex.Store({
+export default new Vuex.Store({
   state: {
     products: [],
   },
@@ -17,13 +17,14 @@ new Vuex.Store({
 
   actions: {
     fetchProducts() {
-
+      // Get all of the products
     },
   },
 
   mutations: {
-    setProducts() {
-
+    setProducts(state, products) {
+      // Update products
+      state.products = products;
     },
   },
 });
